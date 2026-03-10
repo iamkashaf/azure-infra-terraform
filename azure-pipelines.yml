@@ -1,6 +1,18 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/infra_code'
     backendServiceArm: 'myfirstproject'
+    backendAzureRmResourceGroupName: 'demorg'
+    backendAzureRmStorageAccountName: 'demostorage103'
+    backendAzureRmContainerName: 'tfstate'
+    backendAzureRmKey: 'dev.tfstate'
