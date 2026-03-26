@@ -24,7 +24,7 @@ stages:
         backendAzureRmKey: 'alt.tfstate'
 
   - job: Terraform_Fmt
-    dependsOn:Terraform_Init
+    dependsOn: Terraform_Init
     steps:
     - task: TerraformTask@5
       inputs:
@@ -32,7 +32,7 @@ stages:
         command: 'custom'
         workingDirectory: '$(System.DefaultWorkingDirectory)/infra_code'
         outputTo: 'console'
-        customCommand: 'terraform fmt'
+        customCommand: 'fmt'
         environmentServiceNameAzureRM: 'myfirstproject'
 
   - job: Terraform_Validate
