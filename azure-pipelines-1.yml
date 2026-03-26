@@ -110,5 +110,4 @@ stages:
         provider: 'azurerm'
         command: 'apply'
         workingDirectory: '$(System.DefaultWorkingDirectory)/infra_code'
-        commandOptions: 'tfplan'
         environmentServiceNameAzureRM: 'myfirstproject'
