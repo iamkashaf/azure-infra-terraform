@@ -78,8 +78,8 @@ stages:
     - task: ManualValidation@1
       inputs:
         notifyUsers: 'kashafrocks@gmail.com'
-        approvers: 'khan.kashafsalman@gmail.com'
-        instructions: 'Approve before apply'
+        approvers: 'kashafrocks@gmail.com'
+        instructions: 'Please approve'
 
 
 # ------------------ APPLY ------------------
